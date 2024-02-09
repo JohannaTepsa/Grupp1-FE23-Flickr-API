@@ -23,22 +23,12 @@ async function searchImages() {
     imageWrapper.classList.add("img-card");
     const image = document.createElement("img");
     image.src = imageUrl;
-    image.alt = result.alt_description;
-
-    const imageId = result.id;
-    const ownerId = result.owner;
     const imageLink = document.createElement("a");
-    imageLink.href = `https://www.flickr.com/photos/${ownerId}/${imageId}`;
-    imageLink.target = "_blank";
-    imageLink.textContent = result.alt_description;
 
     imageWrapper.appendChild(image);
     imageWrapper.appendChild(imageLink);
-
     imgContainer.appendChild(imageWrapper);
   });
-
-  page++;
 }
 
 formElement.addEventListener("submit", (event) => {
