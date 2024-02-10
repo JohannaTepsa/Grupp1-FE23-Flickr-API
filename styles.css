@@ -2,19 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Lägg till en fontfamily */
+  font-family: "Fira Sans", sans-serif;
+}
+
+/*Define global variables using :root*/
+:root {
+  --main-color: rgb(248, 248, 248);
+  --secondary-color: rgb(236, 236, 236);
+  --third-color: rgb(253, 168, 99);
+  --main-font-color: rgb(63, 63, 63);
+  --secondary-font-color: rgb(216, 130, 59);
+  --hover-color: rgb(252, 126, 24);
+  --font-size: 16px;
 }
 
 body {
   line-height: 1.6;
+  background-color: var(--main-color);
 }
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: bold;
+  color: var(--secondary-font-color);
   text-align: center;
-  margin: 40px 0px 60px 0px;
+  margin: 40px 0px 60px;
 }
 
 form {
@@ -24,36 +36,43 @@ form {
   margin-bottom: 60px;
 }
 
-.search {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  padding: 18px;
-  border-radius: 38px;
-  background: #f6f6f6;
-  transition: box-shadow 0.25s;
-}
-
-.search:focus-within {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-}
-
-.search-input {
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  color: #3333;
-  margin-left: 15px;
+#search-input {
+  max-width: 400px;
+  width: 80%;
+  height: 35px;
+  background-color: var(--secondary-color);
+  font-size: 0.75rem;
+  color: var(--main-font-color);
+  text-indent: 15px;
+  letter-spacing: 1px;
+  border: 1px none;
+  border-radius: 25px;
   outline: none;
-  border: none;
-  background: transparent;
-  width: 300px;
+  margin-right: 20px;
 }
 
-.search-input::placeholder,
-.search-icon {
-  color: rgba(0, 0, 0, 0.5);
+input::placeholder {
+  text-indent: 15px;
 }
 
+/* Ev ta bort knappen */
+#search-button {
+  max-width: 80px;
+  width: 15%;
+  height: 35px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0px 0.25vw 0.5vw rgba(145, 145, 145, 0.2);
+  color: var(--main-font-color);
+  background-color: var(--third-color);
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: var(--hover-color);
+}
 
 .img-container {
   display: flex;
@@ -76,3 +95,6 @@ form {
   height: 100%;
   object-fit: cover;
 }
+
+
+
