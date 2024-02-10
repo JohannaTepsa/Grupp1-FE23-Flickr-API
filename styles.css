@@ -96,31 +96,5 @@ input::placeholder {
   object-fit: cover;
 }
 
-.mainImg {
-  color: var(--secondary-font-color);
-  text-decoration: none;
-  font-size: min(max(1.5vw, 1.5rem), 16px);
-  font-size: max(min(1vw, 1rem), 12px);
-  font-weight: 500;
-  letter-spacing: min(max(0.5vw, 0.5rem), 5px);
-  letter-spacing: max(min(0.1vw, 0.1rem), 1px);
-  margin-left: 1vw;
-}
 
-.mainImg:hover {
-  color: var(--hover-color);
-}
 
-@media screen and (max-width: 600) {
-  .mainImg {
-    font-size: min(0.75rem, 12px);
-    letter-spacing: min(0.1rem, 1px);
-  }
-}
-
-@media screen and (min-width: 601) {
-  .mainImg {
-    font-size: min(1rem, 16px);
-    letter-spacing: min(0.1rem, 1px);
-  }
-}
