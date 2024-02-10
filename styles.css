@@ -7,10 +7,10 @@
 
 body {
   line-height: 1.6;
-  background-color: rgb(216, 216, 216);
 }
 
 h1 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -24,13 +24,36 @@ form {
   margin-bottom: 60px;
 }
 
-#search-input {
-  /* Lägg till styling för sök fältet */
+.search {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: 38px;
+  background: #f6f6f6;
+  transition: box-shadow 0.25s;
 }
 
-#search-button {
-  /* Lägg till styling för knappenn */
+.search:focus-within {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
 }
+
+.search-input {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #3333;
+  margin-left: 15px;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 300px;
+}
+
+.search-input::placeholder,
+.search-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 
 .img-container {
   display: flex;

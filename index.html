@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flickr API</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Image Search App</h1>
 
-    <form action="">
-      <input type="text" id="search-input" placeholder="Search image" />
-      <button id="search-button">Search</button>
-    </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flickr API</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+  </style>
+</head>
 
-    <div class="img-container">
-      <div class="img-card">
-        <img
-          src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
-          alt="Panda"
-        />
-        <a
-          href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
-          target="_blank"
-          >Panda</a
-        >
-      </div>
-      <div class="img-card">
-        <img
-          src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
-          alt="Panda"
-        />
-        <a
-          href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
-          target="_blank"
-          >Panda</a
-        >
-      </div>
-      <div class="img-card">
-        <img
-          src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
-          alt="Panda"
-        />
-        <a
-          href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
-          target="_blank"
-          >Panda</a
-        >
-      </div>
+<body>
+  <h1>Image Search App</h1>
+  <form>
+    <div class="search">
+      <span class="search-icon material-symbols-outlined">search</span>
+      <input class="search-input" type="search" placeholder="Search">
     </div>
+  </form>
 
-    <script src="app.js"></script>
-  </body>
+  <div class="img-container">
+    <div class="img-card">
+      <img
+        src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
+        alt="Panda" />
+      <a href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
+        target="_blank">Panda</a>
+    </div>
+    <div class="img-card">
+      <img
+        src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
+        alt="Panda" />
+      <a href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
+        target="_blank">Panda</a>
+    </div>
+    <div class="img-card">
+      <img
+        src="https://media.istockphoto.com/id/1154796517/sv/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund.jpg?s=2048x2048&w=is&k=20&c=OVLIKkxaQOpPfLwp-n1UESR-BMYs9CZ-W0873TsRauM="
+        alt="Panda" />
+      <a href="https://www.istockphoto.com/se/foto/panda-bear-face-isolerad-p%C3%A5-vit-bakgrund-gm1154796517-314152139?utm_source=flickr&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_term=panda&utm_content=https%3A%2F%2Fwww.flickr.com%2Fsearch%2F&ref=sponsored"
+        target="_blank">Panda</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
