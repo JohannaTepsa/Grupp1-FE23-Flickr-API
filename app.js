@@ -8,6 +8,11 @@ const searchButton = document.getElementById("search-button"); // Hämta sökkna
 let inputData = "";
 let page = 1;
 
+// Skapar en <div> för lightboxen
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
+
 //searchImages funkar som en main function.
 async function searchImages() {
   inputData = inputElement.value;
@@ -53,6 +58,36 @@ async function searchImages() {
     imgContainer.appendChild(imageElement);
   });
 }
+
+// Funktion för att skapa lightboxen
+function createLightbox(imageSrc) {
+  const img = document.createElement('img');
+  img.src = imageSrc;
+  lightbox.appendChild(img);
+  lightbox.classList.add('active');
+}
+
+// Funktion för att visa lightboxen när musen sveper över bilden
+function showLightbox(event) {
+  if (event.target.tagName === 'IMG') {
+      createLightbox(event.target.src);
+  }
+}
+
+// Funktion för att dölja lightboxen när musen lämnar bilden
+function hideLightbox() {
+  lightbox.classList.remove('active');
+  lightbox.innerHTML = '';
+}
+
+// Lägger till händelselyssnare för att visa lightboxen när musen sveper över bilderna
+imgContainer.addEventListener('mouseover', showLightbox);
+
+// Lägger till händelselyssnare för att dölja lightboxen när musen lämnar bilderna
+imgContainer.addEventListener('mouseout', hideLightbox);
+
+
+
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
