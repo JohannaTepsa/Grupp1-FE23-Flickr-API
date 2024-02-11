@@ -21,6 +21,13 @@ body {
   background-color: var(--main-color);
 }
 
+#sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: var(--main-color);
+}
+
 .nav-container {
 	display: flex;
 	justify-content: center;
@@ -31,7 +38,7 @@ body {
 }
 
 .nav-link {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	color: var(--secondary-font-color);
 	text-decoration: none;
 }
@@ -40,18 +47,8 @@ body {
 	color: var(--hover-color);
 }
 
-.hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 180px;
-	background-color: var(--secondary-color);
-	margin-bottom: 50px;
-}
-
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--secondary-font-color);
   text-align: center;
@@ -70,7 +67,7 @@ form {
   width: 80%;
   height: 50px;
   background-color: var(--secondary-color);
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--main-font-color);
   text-indent: 15px;
   letter-spacing: 1px;
@@ -122,10 +119,6 @@ input::placeholder {
   object-fit: cover;
 }
 
-#h1-about {
-	margin-bottom: 100px;
-}
-
 article {
 	max-width: 500px;
 	margin: 0 auto;
@@ -137,6 +130,7 @@ article {
 p {
 	color: var(--main-font-color);
 	text-align: center;
+	margin-top: 15px;
 }
 
 /* Responsive code - for smaller screens */
