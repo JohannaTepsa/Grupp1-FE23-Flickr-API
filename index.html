@@ -14,27 +14,39 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Image Search App</h1>
-    <form action="">
-      <input type="text" id="search-input" placeholder="Search image" />
-      <button id="search-button">
-        <span class="search-icon material-symbols-outlined">search</span>
-      </button>
-    </form>
-  </div>
+	<header id="sticky-header">
+		<nav>
+			<ul class="navbar-container">
+				<li><a href="index.html" class="nav-link">Home</a></li>
+				<li><a href="about.html" class="nav-link">About</a></li>
+				<li><a href="#" class="nav-link">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-  <div class="img-container">
-    <div class="img-card">
-      <img />
-    </div>
-    <div class="img-card">
-      <img />
-    </div>
-    <div class="img-card">
-      <img />
-    </div>
-  </div>
+  <main>
+		<section class="container">
+			<h1>Image Search App</h1>
+			<form action="">
+				<input type="text" id="search-input" placeholder="Search image" />
+				<button id="search-button">
+					<span class="search-icon material-symbols-outlined">search</span>
+				</button>
+			</form>
+		</section>
+
+		<div class="img-container">
+			<div class="img-card">
+				<img />
+			</div>
+			<div class="img-card">
+				<img />
+			</div>
+			<div class="img-card">
+				<img />
+			</div>
+		</div>
+	</main>
 
   <script src="app.js"></script>
 </body>
