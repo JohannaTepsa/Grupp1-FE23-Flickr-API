@@ -16,6 +16,7 @@ async function searchImages() {
   console.log(data);
 
   const results = data.photos.photo;
+  imgContainer.innerHTML = ""; // tömmer imgContainer vid ny sökning
 
   results.map((result) => {
     const imageUrl = `https://farm${result.farm}.staticflickr.com/${result.server}/${result.id}_${result.secret}.jpg`;
@@ -50,4 +51,5 @@ formElement.addEventListener("submit", (event) => {
 searchButton.addEventListener("click", () => {
   page = 1;
   searchImages();
+  console.log(imgContainer);
 });
