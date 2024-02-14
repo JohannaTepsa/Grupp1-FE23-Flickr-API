@@ -15,7 +15,7 @@ async function searchImages() {
   inputData = inputElement.value;
 
   //Skapar en url variabel där vi har lagt till accesKey, inputData och page som queryParam. Lagt även till att jag endast vill ha 12 bilder i taget(per_page)
-  const url = `https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${accesKey}&text=${inputData}&page=${page}&per_page=12&format=json&nojsoncallback=1`;
+  const url = `https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${accesKey}&text=${inputData}&page=${page}&per_page=12&format=json&nojsoncallback=1&media=photos`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -57,6 +57,7 @@ async function searchImages() {
   });
 
   showMoreButton.addEventListener("click", () => {
+    page++;
     searchImages(); // vid klick så anropar vi search funktionen.
   });
 } /*************************************Här tar search funktionen slut.**************************************** */
@@ -75,7 +76,7 @@ searchButton.addEventListener("click", () => {
   imageCount = 0; // Återställer räknaren till för visade bilder
   imgContainer.innerHTML = "";
   page = 1;
-  imageElements();
+  searchImages();
 });
 
 //Jens lightbox.*****************************************************************************************'
