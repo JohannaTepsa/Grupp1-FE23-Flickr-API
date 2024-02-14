@@ -57,6 +57,7 @@ async function searchImages() {
   });
 
   showMoreButton.addEventListener("click", () => {
+    page++;
     searchImages(); // vid klick så anropar vi search funktionen.
   });
 } /*************************************Här tar search funktionen slut.**************************************** */
@@ -75,7 +76,7 @@ searchButton.addEventListener("click", () => {
   imageCount = 0; // Återställer räknaren till för visade bilder
   imgContainer.innerHTML = "";
   page = 1;
-  imageElements();
+  searchImages();
 });
 
 //Jens lightbox.*****************************************************************************************'
