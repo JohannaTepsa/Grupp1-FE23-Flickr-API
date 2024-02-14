@@ -119,6 +119,12 @@ input::placeholder {
   font-weight: lighter;
 }
 
+#search-input:active {
+  transform: scale(0.96);
+  transition: 0.35s;
+}
+
+
 #search-button {
   width: 50px;
   height: 50px;
@@ -128,6 +134,10 @@ input::placeholder {
   color: var(--main-font-color);
   cursor: pointer;
   background-color: var(--main-color);
+}
+
+#search-button:active {
+  transform: scale(0.88);
 }
 
 #search-button:hover {
@@ -214,9 +224,19 @@ p {
 #show-more-btn {
   padding: 10px 20px;
   border-radius: 5px;
+  border: 2px solid black;
   margin: 10px auto 100px;
   cursor: pointer;
   display: block;
   display: none;
   background-color: var(--third-color);
+}
+
+#show-more-btn:active {
+  transform: scale(0.96);
+}
+
+#show-more-btn:hover {
+  box-shadow: 4px 4px 4px 0px gray;
+  transition: 0.35s;
 }
