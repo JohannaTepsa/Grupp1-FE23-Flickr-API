@@ -46,6 +46,7 @@ async function searchImages() {
     titleLink.textContent = " Go to image link";
     titleParagraph.appendChild(titleLink);
     titleLink.style.textDecoration = "none";
+    titleLink.style.color = "var(--main-font-color)";
 
     imageWrapper.appendChild(image); //Här pushar vi upp med hjälp av appendChild.
     imageWrapper.appendChild(titleParagraph); //Här pushar vi upp med hjälp av appendChild.
