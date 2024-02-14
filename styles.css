@@ -153,6 +153,10 @@ input::placeholder {
   text-decoration: none;
 }
 
+/* Go to link id för att kunna styla */
+#title-link {
+}
+
 .img-card img {
   width: 100%;
   height: 100%;

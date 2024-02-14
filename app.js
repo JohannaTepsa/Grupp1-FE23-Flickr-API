@@ -12,6 +12,7 @@ let imageCount = 0;
 
 //searchImages funkar som en main function.
 async function searchImages() {
+  console.log("searchImages() called");
   inputData = inputElement.value;
 
   //Skapar en url variabel där vi har lagt till accesKey, inputData och page som queryParam. Lagt även till att jag endast vill ha 12 bilder i taget(per_page)
@@ -39,6 +40,7 @@ async function searchImages() {
     //skapar en länk under bilden.
     const titleParagraph = document.createElement("p"); //Öppnar en ny p-tagg för att lägga till ankaretagg
     const titleLink = document.createElement("a");
+    titleLink.id = "title-link";
     titleLink.href = `https://www.flickr.com/photos/${result.owner}/${result.id}`;
     titleLink.target = "_blank";
     titleLink.textContent = " Go to image link";
@@ -69,7 +71,6 @@ formElement.addEventListener("submit", (event) => {
   imageCount = 0; // Återställer räknaren till för visade bilder. Url:en är inställd på att det ska finnas 12 bilder vid varje sökning.
   //Vill vi att show more knappen skall ladda upp 12 bilder till måste vi därför få den att börja räkna om.
   imgContainer.innerHTML = "";
-  searchImages();
   showMoreButton.style.display = "none";
 });
 
