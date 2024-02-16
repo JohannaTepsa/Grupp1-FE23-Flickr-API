@@ -12,7 +12,6 @@ let imageCount = 0;
 
 //searchImages funkar som en main function.
 async function searchImages() {
-  console.log("searchImages() called");
   inputData = inputElement.value;
 
   //Skapar en url variabel där vi har lagt till accesKey, inputData och page som queryParam. Lagt även till att jag endast vill ha 12 bilder i taget(per_page)
@@ -23,7 +22,6 @@ async function searchImages() {
 
   //variabeln results blir själva bilden. (Hämtad från json)
   const results = data.photos.photo;
-  imgContainer.innerHTML = ""; // tömmer imgContainer vid ny sökning
 
   // Här skapar vi imageElement och skapar en funktion till den med hjälp av map för att lägga till saker.
   const imageElements = results.map((result) => {
@@ -40,13 +38,11 @@ async function searchImages() {
     //skapar en länk under bilden.
     const titleParagraph = document.createElement("p"); //Öppnar en ny p-tagg för att lägga till ankaretagg
     const titleLink = document.createElement("a");
-    titleLink.id = "title-link";
     titleLink.href = `https://www.flickr.com/photos/${result.owner}/${result.id}`;
     titleLink.target = "_blank";
     titleLink.textContent = " Go to image link";
     titleParagraph.appendChild(titleLink);
     titleLink.style.textDecoration = "none";
-    titleLink.style.color = "var(--main-font-color)";
 
     imageWrapper.appendChild(image); //Här pushar vi upp med hjälp av appendChild.
     imageWrapper.appendChild(titleParagraph); //Här pushar vi upp med hjälp av appendChild.
@@ -80,7 +76,6 @@ searchButton.addEventListener("click", () => {
   imgContainer.innerHTML = "";
   page = 1;
   searchImages();
-  console.log(imgContainer);
 });
 
 //Jens lightbox.*****************************************************************************************'

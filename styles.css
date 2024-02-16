@@ -88,7 +88,7 @@ form {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(img./backgroundimg.jpg);
+  background-image: url(img/backgroundimg.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +123,6 @@ input::placeholder {
   transform: scale(0.98);
   transition: 0.35s;
 }
-
 
 #search-button {
   width: 50px;
@@ -164,7 +163,8 @@ input::placeholder {
 }
 
 /* Go to link id för att kunna styla */
-#title-link {}
+#title-link {
+}
 
 .img-card img {
   width: 100%;
