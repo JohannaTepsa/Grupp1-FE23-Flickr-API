@@ -6,6 +6,67 @@ const imgContainer = document.querySelector(".img-container");
 const searchButton = document.getElementById("search-button"); // Hämta sökknappen
 const showMoreButton = document.getElementById("show-more-btn");
 
+//ERROR-MEDDELANDE FEATURE
+//Variabler för error-meddelande
+const searchInput = document.getElementById("search-input");
+const errorMessage = document.getElementById("error-message");
+const formContainer = document.getElementById("form-container");
+
+//Error-meddelande göms initialt
+errorMessage.style.display = 'none';
+
+//Kolla om sökfältet är tomt
+function isSearchInputEmpty() {
+    return searchInput.value.trim() === '';
+}
+
+//Visa error-meddelande
+function displayErrorMessage() {
+    errorMessage.style.display = 'block';
+}
+
+//Göm error-meddelande
+function hideErrorMessage() {
+    errorMessage.style.display = 'none';
+}
+
+//Event listener för form submit
+document.getElementById("form-container").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    //Om sökfältet är tomt visa error-meddelande
+    if (isSearchInputEmpty()) {
+        displayErrorMessage();
+    } else {
+        hideErrorMessage();
+        await searchImages();
+    }
+});
+
+//Event listener för sökknappen
+searchButton.addEventListener('click', async function(event) {
+    event.preventDefault();
+
+    // Om sökfältet är tomt visa error-meddelande, annars
+    if (isSearchInputEmpty()) {
+        displayErrorMessage();
+    } else {
+        hideErrorMessage();
+        await searchImages();
+    }
+});
+
+//Event listener för Enter-tangenttryck i sökfältet
+searchInput.addEventListener('keypress', async function(event) {
+    //Om Enter trycks och sökfältet är tomt, visa error-meddelande, annars visa inte
+    if (event.key === 'Enter' && isSearchInputEmpty()) {
+        displayErrorMessage();
+    } else {
+        hideErrorMessage();
+    }
+});
+//SLUT ERROR-MEDDELANDE FEATURE
+
 let inputData = "";
 let page = 1;
 let imageCount = 0;
